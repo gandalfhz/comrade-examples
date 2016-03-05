@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+  </head>
+  <body>
+    Login
+    Username: <input data-bind="value: username" /><br />
+    Password: <input type="password" data-bind="value: password" /><br />
+    <button data-bind="click: login">Login</button><br />
+    <span data-bind="text: response"></span>
+    <br />
+    <div>
+      Available logins are<br />
+      <b>admin</b> / <b>admin-password</b><br />
+      <b>user-a</b> / <b>user-password-a</b><br />
+      <b>user-b</b> / <b>user-password-b</b><br />
+    </div>
+  </body>
+</html>

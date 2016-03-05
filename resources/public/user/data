@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="data.js"></script>
+  </head>
+  <body>
+    Your keys
+    <table data-bind="foreach: keyValues">
+      <tr>
+        <td><a data-bind="text: key, attr: {href: uri}, click: $parent.loadValue"></a></td>
+        <td data-bind="text:value"></td>
+        <td><button data-bind="click: $parent.deleteKeyValue">Delete</button></td>
+      </tr>
+    </table>
+    Key: <input data-bind="value: key" /><br />
+    Value: <input data-bind="value: value" /><br />
+    <button data-bind="click: add">Add/Update</button><br />
+    <span data-bind="text: response"></span>
+    <a data-bind="click: logout" href="logout">Logout</a>
+  </body>
+</html>
+

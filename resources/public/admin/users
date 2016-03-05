@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="users.js"></script>
+  </head>
+  <body>
+    Your keys
+    <table data-bind="foreach: users">
+      <tr>
+        <td data-bind="text: $data"></td>
+        <td><button data-bind="click: $parent.deleteUserData">Delete data</button></td>
+      </tr>
+    </table>
+    <span data-bind="text: response"></span>
+    <a data-bind="click: logout" href="logout">Logout</a>
+  </body>
+</html>
+
